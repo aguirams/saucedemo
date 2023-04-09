@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="666.806" tests="20" skipped="0" failures="0" errors="0">
+<testcase classname="Add to Cart Test" name="Add to Cart from Inventory Page - Example #1.1" time="32.493">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks the Add to Cart button for item "Sauce Labs Bike Light"....passed
+Then Inventory item "Sauce Labs Bike Light" is added to cart................passed
+When User goes to cart page.................................................passed
+Then Added item "Sauce Labs Bike Light" is in the cart......................passed
+When User removes item "Sauce Labs Bike Light" from cart....................passed
+Then Item "Sauce Labs Bike Light" previously added to cart is removed.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Add to Cart Test" name="Add to Cart from Inventory Page - Example #1.1" time="35.925">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And User clicks on the inventory item "Test.allTheThings() T-Shirt (Red)" name.passed
+When User clicks the Add to Cart button for item "Test.allTheThings() T-Shirt (Red)" in details page.passed
+Then Inventory item "Test.allTheThings() T-Shirt (Red)" is added to cart from details page.passed
+When User goes to cart page.................................................passed
+Then Added item "Test.allTheThings() T-Shirt (Red)" is in the cart..........passed
+When User removes item "Test.allTheThings() T-Shirt (Red)" from cart........passed
+Then Item "Test.allTheThings() T-Shirt (Red)" previously added to cart is removed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Add to Cart Test" name="Add Two Items to Cart - Example #1.1" time="39.936">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User adds item "Test.allTheThings() T-Shirt (Red)" and item "Sauce Labs Bolt T-Shirt" to cart.passed
+Then Added item "Test.allTheThings() T-Shirt (Red)" and item "Sauce Labs Bolt T-Shirt" are in the cart.passed
+When User removes items "Test.allTheThings() T-Shirt (Red)" and "Sauce Labs Bolt T-Shirt" from cart.passed
+Then Item cart is empty.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add to Cart Test" name="Add to Cart then Immediatly Remove Item from Cart - Inventory Page - Example #1.1" time="30.649">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks the Add to Cart button for item "Sauce Labs Onesie"........passed
+Then Inventory item "Sauce Labs Onesie" is added to cart....................passed
+When Inventory item "Sauce Labs Onesie" is removed from cart in inventory page.passed
+Then Item is not in the cart................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add to Cart Test" name="Add to Cart then Immediatly Remove Item from Cart - Details Page - Example #1.1" time="35.678">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And User clicks on the inventory item "Sauce Labs Fleece Jacket" name.......passed
+When User clicks the Add to Cart button for item "Sauce Labs Fleece Jacket" in details page.passed
+Then Inventory item "Sauce Labs Fleece Jacket" is added to cart from details page.passed
+When Inventory item "Sauce Labs Fleece Jacket" is removed from cart in details page.passed
+Then Item is not in the cart................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Successful Login with Valid Credentials - Example #1.1" time="21.996">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User logs in with UserName as "standard_user" and Password as "secret_sauce".passed
+Then User is redirected to Inventory Page...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Unsuccessful Login with Invalid Credentials - Example #1.1" time="19.535">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User logs in with UserName as "" and Password as ""....................passed
+Then Error message "Epic sadface: Username is required" is displayed........passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Unsuccessful Login with Invalid Credentials - Example #1.2" time="19.202">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User logs in with UserName as "standard_user" and Password as "".......passed
+Then Error message "Epic sadface: Password is required" is displayed........passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Unsuccessful Login with Invalid Credentials - Example #1.3" time="19.263">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User logs in with UserName as "standard_user" and Password as "wrongpass".passed
+Then Error message "Epic sadface: Username and password do not match any user in this service" is displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Unsuccessful Login with Invalid Credentials - Example #1.4" time="19.305">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User logs in with UserName as "locked_out_user" and Password as "secret_sauce".passed
+Then Error message "Epic sadface: Sorry, this user has been locked out." is displayed.passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Action" name="Unsuccessful Login with Invalid Credentials - Example #1.1" time="19.376">
+<system-out><![CDATA[
+Given User is on Swag Labs Home Page........................................passed
+When User redirects to inventory page without logging in....................passed
+Then Error message "Special" is displayed...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Payment Test" name="Add to Cart from Inventory Page - Example #1.1" time="38.244">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks the Add to Cart button for item "Sauce Labs Bike Light"....passed
+Then Inventory item "Sauce Labs Bike Light" is added to cart................passed
+When User goes to cart page.................................................passed
+Then Added item "Sauce Labs Bike Light" is in the cart......................passed
+When User clicks the Checkout button........................................passed
+Then Checkout page is displayed.............................................passed
+When User clicks the Cancel button..........................................passed
+Then User is redirected to cart page with item "Sauce Labs Bike Light" still in cart.passed
+]]></system-out>
+</testcase>
+<testcase classname="Payment Test" name="Add to Cart from Inventory Page - Example #1.1" time="51.445">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks the Add to Cart button for item "Sauce Labs Bike Light"....passed
+Then Inventory item "Sauce Labs Bike Light" is added to cart................passed
+When User goes to cart page.................................................passed
+Then Added item "Sauce Labs Bike Light" is in the cart......................passed
+When User clicks the Checkout button........................................passed
+Then Checkout page is displayed.............................................passed
+When User inputs First Name "First Name" Last Name "Last Name" Postal "1234".passed
+And User clicks the Continue button.........................................passed
+Then Checkout Overview page is diplayed with item "Sauce Labs Bike Light" details.passed
+When User clicks the Finish button..........................................passed
+Then Order is completed.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Payment Test" name="Add to Cart from Inventory Page - Example #1.1" time="92.708">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks the Add to Cart button for item "Sauce Labs Backpack"......passed
+Then Inventory item "Sauce Labs Backpack" is added to cart..................passed
+When User goes to cart page.................................................passed
+Then Added item "Sauce Labs Backpack" is in the cart........................passed
+When User clicks the Checkout button........................................passed
+Then Checkout page is displayed.............................................passed
+When User inputs only Last Name "Delilah" Postal "1234".....................passed
+And User clicks the Continue button.........................................passed
+Then error message for first name is displayed..............................passed
+When User inputs only First Name "Samson" Postal "1234".....................passed
+Then error message for last name is displayed...............................passed
+When User inputs only First Name "Samson" Last Name "Delilah"...............passed
+Then error message for postal code is displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sort Test" name="Sort Inventory Items from A to Z" time="31.765">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And Swag Labs Inventory Page is displayed...................................passed
+When User sorts the items from A to Z.......................................passed
+Then Inventory items are sorted from A to Z.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sort Test" name="Sort Inventory Items from Z to A" time="31.872">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And Swag Labs Inventory Page is displayed...................................passed
+When User sorts the items from Z to A.......................................passed
+Then Inventory items are sorted from Z to A.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sort Test" name="Sort Inventory Items from low to high price" time="32.039">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And Swag Labs Inventory Page is displayed...................................passed
+When User sorts the items from low to high price............................passed
+Then Inventory items are sorted from low to high price......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Sort Test" name="Sort Inventory Items from high to low price" time="31.691">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+And Swag Labs Inventory Page is displayed...................................passed
+When User sorts the items from high to low price............................passed
+Then Inventory items are sorted from high to low price......................passed
+]]></system-out>
+</testcase>
+<testcase classname="View Items Test" name="View item by clicking item name - Example #1.1" time="31.543">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks on the inventory item "Sauce Labs Backpack" name...........passed
+Then User is redirected to details page for item "Sauce Labs Backpack" with price "$29.99".passed
+]]></system-out>
+</testcase>
+<testcase classname="View Items Test" name="View item by clicking item image - Example #1.1" time="31.693">
+<system-out><![CDATA[
+Given User is logged in to Swag Labs........................................passed
+When User clicks on the inventory item "Test.allTheThings() T-Shirt (Red)" image.passed
+Then User is redirected to details page for item "Test.allTheThings() T-Shirt (Red)" with price "$15.99".passed
+]]></system-out>
+</testcase>
+</testsuite>
